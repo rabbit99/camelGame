@@ -21,6 +21,8 @@ public class GameManager : Singleton<GameManager>
     public ActivateAIEvent onActivateAIEvent = new ActivateAIEvent();
     [HideInInspector]
     public ShowCurrentControlUIEvent onShowCurrentControlUIEvent = new ShowCurrentControlUIEvent();
+    [HideInInspector]
+    public UpdateNowPlayerInfoEvent onUpdateNowPlayerInfoEvent = new UpdateNowPlayerInfoEvent();
 
 
     // Start is called before the first frame update
@@ -55,7 +57,7 @@ public class GameManager : Singleton<GameManager>
     {
         Debug.Log("get the spin step = " + index);
         onGameManagerPlayResponseEvent.Invoke(index);
-        onStopRoundkEvent.Invoke();
+  
     }
 
     private void preShowGame()
@@ -75,5 +77,15 @@ public class GameManager : Singleton<GameManager>
     public void ActivateAI(string name)
     {
         onActivateAIEvent.Invoke(name);
+    }
+
+    public void UpdateNowPlayerInfo(PlayerData playerData)
+    {
+        onUpdateNowPlayerInfoEvent.Invoke(playerData);
+    }
+
+    public void StopRound()
+    {
+        onStopRoundkEvent.Invoke();
     }
 }

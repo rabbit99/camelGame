@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,12 +8,13 @@ public class RoundManager : MonoBehaviour
 {
     private List<PlayerData> playersData = new List<PlayerData>();
     private int sequenceIndex = 0;
-
+    public int delaySeconds = 1;
     private void Awake()
     {
         Singleton<GameManager>.Instance.onInitPlayerDataEvent.AddListener(InitPlayerData);
         Singleton<GameManager>.Instance.onStartRoundkEvent.AddListener(StartRound);
         Singleton<GameManager>.Instance.onStopRoundkEvent.AddListener(NextPlayer);
+        Singleton<GameManager>.Instance.onGameManagerPlayResponseEvent.AddListener(onGameManagerPlayResponse);
     }
 
     // Start is called before the first frame update
@@ -39,13 +41,16 @@ public class RoundManager : MonoBehaviour
 
     public void NextPlayer()
     {
-        sequenceIndex++;
-        //Debug.Log("NextPlayer sequenceIndex  = " + sequenceIndex + "  playersData.Count = "+ playersData.Count);
-        if (sequenceIndex > playersData.Count -1)
-        {
-            sequenceIndex = 0;
-        }
-        processRound();
+        StartCoroutine(DelayRequest(() => {
+            sequenceIndex++;
+            //Debug.Log("NextPlayer sequenceIndex  = " + sequenceIndex + "  playersData.Count = "+ playersData.Count);
+            if (sequenceIndex > playersData.Count - 1)
+            {
+                sequenceIndex = 0;
+            }
+            processRound();
+        }));
+
     }
 
     private void processRound()
@@ -61,6 +66,17 @@ public class RoundManager : MonoBehaviour
             Singleton<GameManager>.Instance.ShowCurrentControlUI(false);
             Singleton<GameManager>.Instance.ActivateAI(playersData[sequenceIndex].playerName);
         }
+        Singleton<GameManager>.Instance.UpdateNowPlayerInfo(playersData[sequenceIndex]);
     }
 
+    private void onGameManagerPlayResponse(int index)
+    {
+        StartCoroutine(DelayRequest(() => { Singleton<GameManager>.Instance.StopRound(); }));
+    }
+
+    private IEnumerator DelayRequest(Action callback)
+    {
+        yield return new WaitForSeconds(delaySeconds);
+        callback();
+    }
 }

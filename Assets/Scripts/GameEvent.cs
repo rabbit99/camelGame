@@ -27,6 +27,8 @@ public class InitPlayerDataEvent : UnityEvent<List<PlayerData>> { }
 public class ActivateAIEvent : UnityEvent<string> { }
 [System.Serializable]
 public class ShowCurrentControlUIEvent : UnityEvent<bool> { }
+[System.Serializable]
+public class UpdateNowPlayerInfoEvent : UnityEvent<PlayerData> { }
 
 //Mock Server
 [System.Serializable]
