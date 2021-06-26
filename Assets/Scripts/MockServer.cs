@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using williamTool;
 
 [System.Serializable]
 public class PlayResponseEvent : UnityEvent<int> { }
@@ -10,7 +11,7 @@ public class PlayResponseEvent : UnityEvent<int> { }
 [System.Serializable]
 public class RefreshResponseEvent : UnityEvent<RefreshData> { }
 
-public class MockServer : MonoBehaviour
+public class MockServer : Singleton<MockServer>
 {
     public int delaySeconds = 1;
     public PlayResponseEvent onPlayResponseEvent = new PlayResponseEvent();
