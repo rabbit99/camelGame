@@ -458,6 +458,8 @@ MonoBehaviour:
   preShowGameObjectRoot: {fileID: 1287312977}
   preShowGameObject:
   - {fileID: 4739362615393572802, guid: d635dd2c46eb4b845bca585530e6a25c, type: 3}
+  - {fileID: 7665993903447560557, guid: 5a1c80fd31707a543bc8b6c4e1e5c055, type: 3}
+  - {fileID: 6639369111278343444, guid: ca766b750eeea4d4ea66fef200fe4572, type: 3}
   onSpinClickEvent:
     m_PersistentCalls:
       m_Calls:
@@ -474,6 +476,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   onGameManagerPlayResponseEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onInitPlayerDataEvent:
     m_PersistentCalls:
       m_Calls: []
   onGameManagerRefresResponseEvent:
