@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.11f1 (99c7afb366b3) revision 10078127'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19042.1052; Version 2009; 64bit' Language: 'zh' Physical Memory: 24503 MB
+OS: 'Windows 10 Home; OS build 19042.1110; Version 2009; 64bit' Language: 'zh' Physical Memory: 24503 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -15,11 +15,11 @@ F:/Unity/prototype/camelGame
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-5062
+14705
 Successfully changed project path to: F:/Unity/prototype/camelGame
 F:/Unity/prototype/camelGame
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 36.94 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 64.37 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.11f1 (99c7afb366b3)
 [Subsystems] Discovering subsystems at path F:/UnityHub/resources/2020.3.11f1/Editor/Data/Resources/UnitySubsystems
@@ -35,251 +35,135 @@ Initialize mono
 Mono path[0] = 'F:/UnityHub/resources/2020.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'F:/UnityHub/resources/2020.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'F:/UnityHub/resources/2020.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56280
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56376
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: F:/UnityHub/resources/2020.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002224 seconds.
+Registered in 0.001778 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 37.21 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 63.75 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.366 seconds
+- Completed reload, in  3.231 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006372 seconds.
+Registered in 0.007299 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.60 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.434 seconds
+- Completed reload, in  1.314 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.33 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1396 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 64.8 MB.
-System memory in use after: 64.9 MB.
+Unloading 1487 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.2 MB.
+System memory in use after: 69.3 MB.
 
-Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 1831.
-Total: 2.236500 ms (FindLiveObjects: 0.172800 ms CreateObjectMapping: 0.058300 ms MarkObjects: 1.911100 ms  DeleteObjects: 0.093100 ms)
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 1926.
+Total: 2.196500 ms (FindLiveObjects: 0.141900 ms CreateObjectMapping: 0.044200 ms MarkObjects: 1.898900 ms  DeleteObjects: 0.110400 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Prefab/ConsoleManager.prefab
-  artifactKey: Guid(d635dd2c46eb4b845bca585530e6a25c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/ConsoleManager.prefab using Guid(d635dd2c46eb4b845bca585530e6a25c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55e12163dfc1536867b7e0dddb4a7aec') in 0.103889 seconds
-  Import took 0.106650 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006429 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.177 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.36 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1390 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 64.8 MB.
-System memory in use after: 64.9 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1836.
-Total: 2.243700 ms (FindLiveObjects: 0.159400 ms CreateObjectMapping: 0.050700 ms MarkObjects: 1.982600 ms  DeleteObjects: 0.049600 ms)
+  path: Assets/Assets_DevilsWorkShop/Low_Poly_Pixel_2D_Blocks_DevilsWorkShop_v04/Prefabs/assets_1024x1024/isometric_0000.prefab
+  artifactKey: Guid(a6b0ac1f4473d174da7bfc54b07881c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkShop/Low_Poly_Pixel_2D_Blocks_DevilsWorkShop_v04/Prefabs/assets_1024x1024/isometric_0000.prefab using Guid(a6b0ac1f4473d174da7bfc54b07881c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eacb921ec8f84567fc327659a6a81508') in 0.135387 seconds
+  Import took 0.138931 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 47.323087 seconds.
-  path: Assets/Prefab/ConsoleManager.prefab
-  artifactKey: Guid(d635dd2c46eb4b845bca585530e6a25c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/ConsoleManager.prefab using Guid(d635dd2c46eb4b845bca585530e6a25c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '495484015a851710ee3d768ad682ce93') in 0.044448 seconds
-  Import took 0.047368 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005949 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.111 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1390 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 64.8 MB.
-System memory in use after: 64.9 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1839.
-Total: 2.847700 ms (FindLiveObjects: 0.139600 ms CreateObjectMapping: 0.044100 ms MarkObjects: 2.609200 ms  DeleteObjects: 0.053700 ms)
+  Time since last request: 0.000431 seconds.
+  path: Assets/Assets_DevilsWorkShop/Low_Poly_Pixel_2D_Blocks_DevilsWorkShop_v04/Prefabs/assets_1024x1024/isometric_0005.prefab
+  artifactKey: Guid(837b899dbc7a45f4bbfac8da3fec0a2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkShop/Low_Poly_Pixel_2D_Blocks_DevilsWorkShop_v04/Prefabs/assets_1024x1024/isometric_0005.prefab using Guid(837b899dbc7a45f4bbfac8da3fec0a2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6b1eab4d073f634a004d703ca2188fd') in 0.036843 seconds
+  Import took 0.039953 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 22.408484 seconds.
-  path: Assets/Prefab/ConsoleManager.prefab
-  artifactKey: Guid(d635dd2c46eb4b845bca585530e6a25c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/ConsoleManager.prefab using Guid(d635dd2c46eb4b845bca585530e6a25c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a37f71869fb22fa4190f2196722c7fc') in 0.049272 seconds
-  Import took 0.052140 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005967 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.31 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.164 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.35 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1390 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 64.8 MB.
-System memory in use after: 64.9 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1842.
-Total: 2.133600 ms (FindLiveObjects: 0.150900 ms CreateObjectMapping: 0.047600 ms MarkObjects: 1.885100 ms  DeleteObjects: 0.048600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011596 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.175 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1390 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 64.8 MB.
-System memory in use after: 64.9 MB.
-
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1845.
-Total: 2.048600 ms (FindLiveObjects: 0.154300 ms CreateObjectMapping: 0.045600 ms MarkObjects: 1.785800 ms  DeleteObjects: 0.046900 ms)
+  Time since last request: 12.197923 seconds.
+  path: Assets/Image/isometric_0000 1.png
+  artifactKey: Guid(c31dd83bca84f084dbfbf6d6cc3b67bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/isometric_0000 1.png using Guid(c31dd83bca84f084dbfbf6d6cc3b67bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '902fa1f1c16bc875a42b0dc6ff5b1f7f') in 0.118017 seconds
+  Import took 0.121239 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 507.168330 seconds.
-  path: Assets/Prefab/ConsoleManager.prefab
-  artifactKey: Guid(d635dd2c46eb4b845bca585530e6a25c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/ConsoleManager.prefab using Guid(d635dd2c46eb4b845bca585530e6a25c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '827421867f3884bebb16586e88986531') in 0.044379 seconds
-  Import took 0.046968 seconds .
+  Time since last request: 8.147148 seconds.
+  path: Assets/Assets_DevilsWorkShop/Low_Poly_Pixel_2D_Blocks_DevilsWorkShop_v04/Textures/assets_1024x1024/isometric_0000.png
+  artifactKey: Guid(c31dd83bca84f084dbfbf6d6cc3b67bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkShop/Low_Poly_Pixel_2D_Blocks_DevilsWorkShop_v04/Textures/assets_1024x1024/isometric_0000.png using Guid(c31dd83bca84f084dbfbf6d6cc3b67bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cfb5bac23a5990386e0f6757bed3a80') in 0.055944 seconds
+  Import took 0.060184 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.015755 seconds.
-  path: Assets/Prefab/ConsoleManager.prefab
-  artifactKey: Guid(d635dd2c46eb4b845bca585530e6a25c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/ConsoleManager.prefab using Guid(d635dd2c46eb4b845bca585530e6a25c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '827421867f3884bebb16586e88986531') in 0.007068 seconds
-  Import took 0.010681 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007079 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.31 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.257 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1390 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 64.8 MB.
-System memory in use after: 64.9 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1848.
-Total: 3.024200 ms (FindLiveObjects: 0.344400 ms CreateObjectMapping: 0.118600 ms MarkObjects: 2.509800 ms  DeleteObjects: 0.050300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007536 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.31 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.126 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.37 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1390 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 64.8 MB.
-System memory in use after: 64.9 MB.
-
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1851.
-Total: 2.139400 ms (FindLiveObjects: 0.156200 ms CreateObjectMapping: 0.049100 ms MarkObjects: 1.888700 ms  DeleteObjects: 0.043700 ms)
+  Time since last request: 9.787181 seconds.
+  path: Assets/NavMeshPlus-master
+  artifactKey: Guid(8f854a02f99d47744a75baf14d3ecdcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NavMeshPlus-master using Guid(8f854a02f99d47744a75baf14d3ecdcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b615001f0626f95b2e03f4ec2897410') in 0.004831 seconds
+  Import took 0.008224 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 162.683095 seconds.
-  path: Assets/Prefab/ConsoleManager.prefab
-  artifactKey: Guid(d635dd2c46eb4b845bca585530e6a25c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/ConsoleManager.prefab using Guid(d635dd2c46eb4b845bca585530e6a25c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56f7203a821d0d38765b138fd5a74868') in 0.044643 seconds
-  Import took 0.047492 seconds .
+  Time since last request: 4.350320 seconds.
+  path: Assets/NavMeshPlus-master/Gizmos
+  artifactKey: Guid(1f3d783ec2096a945b949dc7763121c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NavMeshPlus-master/Gizmos using Guid(1f3d783ec2096a945b949dc7763121c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '304bf206d7b0bd852a89ab61d03e2a05') in 0.003540 seconds
+  Import took 0.006888 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.023578 seconds.
-  path: Assets/Prefab/ConsoleManager.prefab
-  artifactKey: Guid(d635dd2c46eb4b845bca585530e6a25c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/ConsoleManager.prefab using Guid(d635dd2c46eb4b845bca585530e6a25c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56f7203a821d0d38765b138fd5a74868') in 0.006366 seconds
-  Import took 0.009515 seconds .
+  Time since last request: 1.157124 seconds.
+  path: Assets/NavMeshPlus-master/Gizmos/NavMeshLink Icon.png
+  artifactKey: Guid(92f4afa3e25264f5b964937ccea49ff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NavMeshPlus-master/Gizmos/NavMeshLink Icon.png using Guid(92f4afa3e25264f5b964937ccea49ff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01bba4daf461a673b729f4f4f4278a85') in 0.008782 seconds
+  Import took 0.012106 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006674 seconds.
+Registered in 0.006095 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.192 seconds
+- Completed reload, in  1.212 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.33 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.64 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1390 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 64.8 MB.
-System memory in use after: 64.9 MB.
+Unloading 1467 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71.9 MB.
+System memory in use after: 72.0 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1854.
-Total: 2.173500 ms (FindLiveObjects: 0.150700 ms CreateObjectMapping: 0.047600 ms MarkObjects: 1.924200 ms  DeleteObjects: 0.050000 ms)
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1933.
+Total: 2.388700 ms (FindLiveObjects: 0.206000 ms CreateObjectMapping: 0.051100 ms MarkObjects: 2.066600 ms  DeleteObjects: 0.049500 ms)
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.010931 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.718 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1390 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 64.8 MB.
-System memory in use after: 65.0 MB.
+Received Import Request.
+  Time since last request: 654.634901 seconds.
+  path: Assets/Assets_DevilsWorkShop/Low_Poly_Pixel_2D_Blocks_DevilsWorkShop_v04/Textures/assets_1024x1024/isometric_0001 1.png
+  artifactKey: Guid(5bb1c2b5084a79143999f709bfec6711) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkShop/Low_Poly_Pixel_2D_Blocks_DevilsWorkShop_v04/Textures/assets_1024x1024/isometric_0001 1.png using Guid(5bb1c2b5084a79143999f709bfec6711) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2692834b7f40380e8ca2cfd203dedf0') in 0.074179 seconds
+  Import took 0.078184 seconds .
 
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1857.
-Total: 2.925500 ms (FindLiveObjects: 0.286700 ms CreateObjectMapping: 0.089900 ms MarkObjects: 2.439000 ms  DeleteObjects: 0.107500 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 37.919498 seconds.
+  path: Assets/Image
+  artifactKey: Guid(fa2f23adf1ad5444aaf6ab979b657dcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image using Guid(fa2f23adf1ad5444aaf6ab979b657dcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b9035cd0d572259c81789876310ab6d') in 0.003154 seconds
+  Import took 0.006679 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 55.552794 seconds.
+  path: Assets/Assets_DevilsWorkShop/Low_Poly_Pixel_2D_Blocks_DevilsWorkShop_v04/Textures/assets_1024x1024/isometric_0001.png
+  artifactKey: Guid(5bb1c2b5084a79143999f709bfec6711) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkShop/Low_Poly_Pixel_2D_Blocks_DevilsWorkShop_v04/Textures/assets_1024x1024/isometric_0001.png using Guid(5bb1c2b5084a79143999f709bfec6711) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21e92c7ed0936892a29dbadacaa37dde') in 0.052512 seconds
+  Import took 0.055695 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
