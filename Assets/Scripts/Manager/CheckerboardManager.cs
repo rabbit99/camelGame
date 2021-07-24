@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
@@ -18,9 +19,17 @@ public class CheckerboardManager : MonoBehaviour
     public GameObject markNumParent;
 
     public List<Vector3> availablePlaces;
+    public List<PlayerController> players;
     // Start is called before the first frame update
     void Start()
     {
+        for (int j = 0; j < players.Count; j++)
+        {
+            players[j].PlayerCheckTileAction += CheckTileAction;
+            players[j].PlayerDoTileAction += DoTileAction;
+            players[j].PlayerGetMovementPos += GetMovementPos;
+            players[j].PlayerGetGridPos += GetGridPos;
+        }
         availablePlaces = new List<Vector3>();
         for (int n = tileMap.cellBounds.xMin; n < tileMap.cellBounds.xMax; n++)
         {
@@ -72,22 +81,68 @@ public class CheckerboardManager : MonoBehaviour
                 }
             }
         }
-        //int i = 1;
-        //foreach(var go in allUsedTiles)
-        //{
-        //    Debug.Log(go.tb.name + " " + go.worldPos);
-        //    GameObject mark = Instantiate<GameObject>(markNum);
-        //    mark.transform.SetPositionAndRotation(go.worldPos, Quaternion.identity);
-        //    mark.GetComponentInChildren<Text>().text = i.ToString();
-        //    mark.transform.SetParent(markNumParent.transform);
-        //    i++;
-        //}
-        //Debug.Log(allUsedTiles.Count+ "數量");
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private bool CheckTileAction(Vector3Int gridPos)
+    {
+        return tileMap.HasTile(gridPos);
+    }
+
+    private async Task<bool> DoTileAction(Vector3Int gridPos, bool isArrived)
+    {
+        BoardTile bt = tileMap.GetTile(gridPos) as BoardTile;
+        if (bt)
+        {
+            Debug.Log("走到 " + bt.GetBoardName() + " pos = " + gridPos);
+            switch (bt.boardTileType)
+            {
+                case BoardTileType.Normal:
+                    break;
+                case BoardTileType.Shop:
+                    break;
+                case BoardTileType.DivergentRoad:
+                    break;
+            }
+            if (bt.CheckObstacles()) {
+                Debug.Log(bt.GetBoardName()+" 發現障礙，中斷前進");
+                isArrived = true; 
+            }
+            if (!isArrived)
+            {
+                await bt.PassByAction();
+                Debug.Log("路過" + bt.GetBoardName() + "完畢");
+            }
+            else
+            {
+                await bt.ArrivalAction();
+                Debug.Log("抵達" + bt.GetBoardName() + "完畢");
+            }
+            return isArrived;
+        }
+        else
+        {
+            Debug.Log("走到 " + "普通格" + " pos = " + gridPos);
+            return false;
+        }
+    }
+
+    private Vector3 GetMovementPos(Vector3Int gridPos)
+    {
+        return tileMap.GetCellCenterWorld(gridPos);
+    }
+    private Vector3Int GetGridPos(Vector3 nextPos)
+    {
+        return tileMap.WorldToCell(nextPos);
+    }
+
+    public void SetAdditionalTileAttributes(Vector3Int gridPos)
+    {
+        BoardTile bt = tileMap.GetTile(gridPos) as BoardTile;
     }
 }

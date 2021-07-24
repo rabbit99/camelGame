@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -36,3 +37,11 @@ public class PlayResponseEvent : UnityEvent<int> { }
 
 [System.Serializable]
 public class RefreshResponseEvent : UnityEvent<RefreshData> { }
+
+
+public enum BoardTileType
+{
+    Normal = 0,
+    Shop,
+    DivergentRoad,
+}
