@@ -20,6 +20,16 @@ public class CheckerboardManager : MonoBehaviour
 
     public List<Vector3> availablePlaces;
     public List<PlayerController> players;
+
+    private MouseInput mouseInput;
+
+    public GameObject itemTest;
+
+    private void Awake()
+    {
+        mouseInput = new MouseInput();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -81,12 +91,45 @@ public class CheckerboardManager : MonoBehaviour
                 }
             }
         }
+    
+        mouseInput.Mouse.MouseClick.performed += x => MouseClick();
+    }
+
+    private void OnEnable()
+    {
+        mouseInput.Enable();
+    }
+
+    private void OnDisable()
+    {
+        mouseInput.Disable();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void MouseClick()
+    {
+
+        Vector2 mpos = mouseInput.Mouse.MousePosition.ReadValue<Vector2>();
+        //Debug.Log("MouseClick mpos = " + mpos );
+        mpos = Camera.main.ScreenToWorldPoint(mpos);
+        //Debug.Log("MouseClick mpos2 ScreenToWorldPoint = " + mpos2);
+        Vector3Int gridPos = tileMap.WorldToCell(mpos);
+        Debug.Log("MouseClick mpos = " + mpos + "  gridPos = " + gridPos);
+        if (tileMap.HasTile(gridPos))
+        {
+            Debug.Log("MouseClick HasTile ");
+            Vector3 fpos = GetMovementPos(gridPos);
+            GameObject item = Instantiate<GameObject>(itemTest);
+            item.transform.position = new Vector3(fpos.x, fpos.y + 0.3f);
+
+            BoardTile bt = tileMap.GetTile(gridPos) as BoardTile;
+            bt.hasObstacles = true;
+        }
     }
 
     private bool CheckTileAction(Vector3Int gridPos)

@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
         {
             Interrupted = await moveOneWayOneStep(lastDir != Direction.None ? lastDir : nowDir, i == step - 1);
             await Task.Delay(System.TimeSpan.FromSeconds(0.2f));
-            if (Interrupted && i < step)
+            if (Interrupted && i != step - 1)
             {
                 Debug.Log("player 仍有步數，被打斷");
                 break;
@@ -69,16 +69,14 @@ public class PlayerController : MonoBehaviour
     {
         Vector3Int gridPos = getGridPos(direction);
         bool Interrupted = false;
-        if (PlayerCheckTileAction(gridPos))
+        Vector3 movementPos = PlayerGetMovementPos(gridPos); ;
+        if (!PlayerCheckTileAction(gridPos))
         {
-            Vector3 movementPos = PlayerGetMovementPos(gridPos);
-            this.gameObject.transform.position = new Vector3(movementPos.x, movementPos.y + 0.3f);
-            lastDir = direction;
+            tryOtherWay(ref direction, ref movementPos);
         }
-        else
-        {
-            tryOtherWay(direction);
-        }
+        gridPos = getGridPos(direction);
+        lastDir = direction;
+        this.gameObject.transform.position = new Vector3(movementPos.x, movementPos.y + 0.3f);
         Interrupted = await PlayerDoTileAction(gridPos, isArrived);
         return Interrupted;
     }
@@ -122,64 +120,55 @@ public class PlayerController : MonoBehaviour
         return gridPos;
     }
 
-    private void tryOtherWay(Direction direction)
+    private void tryOtherWay(ref Direction direction, ref Vector3 movementPos)
     {
-        Vector3 movementPos = Vector3.zero;
         switch (direction)
         {
             case Direction.WeatNorth:
                 if (checkDirVector3(Direction.EastNorth))
                 {
-                    movementPos = getMovementPos(Direction.EastNorth);
                     direction = Direction.EastNorth;
                 }
                 else if (checkDirVector3(Direction.WeatSouth))
                 {
-                    movementPos = getMovementPos(Direction.WeatSouth);
                     direction = Direction.WeatSouth;
                 }
                 break;
             case Direction.WeatSouth:
                 if (checkDirVector3(Direction.WeatNorth))
                 {
-                    movementPos = getMovementPos(Direction.WeatNorth);
                     direction = Direction.WeatNorth;
                 }
                 else if (checkDirVector3(Direction.EastSouth))
                 {
-                    movementPos = getMovementPos(Direction.EastSouth);
                     direction = Direction.EastSouth;
                 }
                 break;
             case Direction.EastNorth:
                 if (checkDirVector3(Direction.WeatNorth))
                 {
-                    movementPos = getMovementPos(Direction.WeatNorth);
                     direction = Direction.WeatNorth;
                 }
                 else if (checkDirVector3(Direction.EastSouth))
                 {
-                    movementPos = getMovementPos(Direction.EastSouth);
                     direction = Direction.EastSouth;
                 }
                 break;
             case Direction.EastSouth:
                 if (checkDirVector3(Direction.EastNorth))
                 {
-                    movementPos = getMovementPos(Direction.EastNorth);
                     direction = Direction.EastNorth;
                 }
                 else if (checkDirVector3(Direction.WeatSouth))
                 {
-                    movementPos = getMovementPos(Direction.WeatSouth);
+
                     direction = Direction.WeatSouth;
                 }
                 break;
             default:
                 break;
         }
+        movementPos = getMovementPos(direction);
         Debug.Log("tryOtherWay " + direction.ToString() + "is corrent");
-        this.gameObject.transform.position = new Vector3(movementPos.x, movementPos.y + 0.3f);
-        lastDir = direction;
     }
 }

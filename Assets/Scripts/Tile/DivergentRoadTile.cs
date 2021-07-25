@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class DivergentRoadTile : BoardTile
 {
+    
     public string Direction;
     public async override Task ArrivalAction()
     {
