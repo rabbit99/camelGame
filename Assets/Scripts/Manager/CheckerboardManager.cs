@@ -70,7 +70,7 @@ public class CheckerboardManager : MonoBehaviour
         }
 
         BoundsInt bounds = tileMap.cellBounds;
-        TileBase[] allTiles =  tileMap.GetTilesBlock(bounds);
+        TileBase[] allTiles = tileMap.GetTilesBlock(bounds);
         List<BoardBase> allUsedTiles = new List<BoardBase>();
         for (int x = 0; x < bounds.size.x; x++)
         {
@@ -81,7 +81,7 @@ public class CheckerboardManager : MonoBehaviour
                 if (tile != null)
                 {
                     bb.tb = tile;
-                    bb.worldPos = tileMap.GetCellCenterWorld(new Vector3Int( x, y, 0));
+                    bb.worldPos = tileMap.GetCellCenterWorld(new Vector3Int(x, y, 0));
                     allUsedTiles.Add(bb);
                     Debug.Log("x:" + x + " y:" + y + " tile:" + tile.name);
                 }
@@ -91,7 +91,7 @@ public class CheckerboardManager : MonoBehaviour
                 }
             }
         }
-    
+
         mouseInput.Mouse.MouseClick.performed += x => MouseClick();
     }
 
@@ -108,27 +108,25 @@ public class CheckerboardManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void MouseClick()
     {
-
         Vector2 mpos = mouseInput.Mouse.MousePosition.ReadValue<Vector2>();
-        //Debug.Log("MouseClick mpos = " + mpos );
         mpos = Camera.main.ScreenToWorldPoint(mpos);
-        //Debug.Log("MouseClick mpos2 ScreenToWorldPoint = " + mpos2);
         Vector3Int gridPos = tileMap.WorldToCell(mpos);
-        Debug.Log("MouseClick mpos = " + mpos + "  gridPos = " + gridPos);
         if (tileMap.HasTile(gridPos))
         {
             Debug.Log("MouseClick HasTile ");
+            //TODO: 分離出去對格子使用道具的行為
             Vector3 fpos = GetMovementPos(gridPos);
             GameObject item = Instantiate<GameObject>(itemTest);
             item.transform.position = new Vector3(fpos.x, fpos.y + 0.3f);
 
             BoardTile bt = tileMap.GetTile(gridPos) as BoardTile;
-            bt.hasObstacles = true;
+            if (bt)
+                bt.hasObstacles = true;
         }
     }
 
@@ -152,9 +150,11 @@ public class CheckerboardManager : MonoBehaviour
                 case BoardTileType.DivergentRoad:
                     break;
             }
-            if (bt.CheckObstacles()) {
-                Debug.Log(bt.GetBoardName()+" 發現障礙，中斷前進");
-                isArrived = true; 
+            if (bt.CheckObstacles())
+            {
+                Debug.Log(bt.GetBoardName() + " 發現障礙，中斷前進");
+                //TODO: 使障礙物消失
+                isArrived = true;
             }
             if (!isArrived)
             {
