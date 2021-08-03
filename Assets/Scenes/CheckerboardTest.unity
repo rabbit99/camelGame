@@ -1924,13 +1924,13 @@ MonoBehaviour:
       - m_Target: {fileID: 765693140}
         m_TargetAssemblyTypeName: CheckerboardManager, Assembly-CSharp
         m_MethodName: SetDirection
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: right
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &661202614
@@ -3177,13 +3177,13 @@ MonoBehaviour:
       - m_Target: {fileID: 765693140}
         m_TargetAssemblyTypeName: CheckerboardManager, Assembly-CSharp
         m_MethodName: SetDirection
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: middle
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1276142203
@@ -3560,13 +3560,13 @@ MonoBehaviour:
       - m_Target: {fileID: 765693140}
         m_TargetAssemblyTypeName: CheckerboardManager, Assembly-CSharp
         m_MethodName: SetDirection
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: left
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1605423984

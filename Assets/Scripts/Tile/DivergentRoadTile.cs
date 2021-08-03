@@ -32,6 +32,7 @@ public class DivergentRoadTile : BoardTile
             if (result)
             {
                 result = false;
+                await Task.Yield();
                 return;
             }
         }

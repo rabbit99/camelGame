@@ -101,7 +101,7 @@ public class CheckerboardManager : MonoBehaviour
             }
         }
 
-        mouseInput.Mouse.MouseClick.performed += x => MouseClick();
+        //mouseInput.Mouse.MouseClick.performed += x => MouseClick();
     }
 
     private void OnEnable()
@@ -198,8 +198,10 @@ public class CheckerboardManager : MonoBehaviour
         BoardTile bt = tileMap.GetTile(gridPos) as BoardTile;
     }
 
-    public void SetDirection()
+    public void SetDirection(string direction)
     {
         DivergentRoadTile.result = true;
+        //TODO 判斷是哪一個玩家選的
+        players[0].SetLastDirection(direction);
     }
 }
