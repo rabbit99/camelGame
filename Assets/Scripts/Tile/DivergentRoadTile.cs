@@ -3,23 +3,38 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DivergentRoadTile : BoardTile
 {
-    
+    public static bool result = false;
+    public UnityEvent onCustomEvent = new UnityEvent();
     public string Direction;
-    public async override Task ArrivalAction()
-    {
-        await Task.Yield();
-        Debug.Log("路過分歧路，暫行行走，選擇下一個前進的方向");
-
-    }
-
     public async override Task PassByAction()
     {
-        await Task.Yield();
-        Debug.Log("抵達分歧路，選擇下一個前進的方向");
+        Debug.Log("路過分歧路，暫行行走，選擇下一個前進的方向");
+        onCustomEvent.Invoke();
+        await waitForSetDirection();
+    }
 
+    public async override Task ArrivalAction()
+    {
+        Debug.Log("抵達分歧路，選擇下一個前進的方向");
+        onCustomEvent.Invoke();
+        await waitForSetDirection();
+    }
+
+    private async Task waitForSetDirection()
+    {
+        while (true)
+        {
+            await Task.Delay(System.TimeSpan.FromSeconds(0.1));
+            if (result)
+            {
+                result = false;
+                return;
+            }
+        }
     }
 
 #if UNITY_EDITOR

@@ -25,6 +25,8 @@ public class CheckerboardManager : MonoBehaviour
 
     public GameObject itemTest;
 
+    public GameObject DivergentRoadPanel;
+
     private void Awake()
     {
         mouseInput = new MouseInput();
@@ -84,6 +86,13 @@ public class CheckerboardManager : MonoBehaviour
                     bb.worldPos = tileMap.GetCellCenterWorld(new Vector3Int(x, y, 0));
                     allUsedTiles.Add(bb);
                     Debug.Log("x:" + x + " y:" + y + " tile:" + tile.name);
+                    if(tile as DivergentRoadTile)
+                    {
+                        Debug.Log("³]©w" + tile.name);
+                        (tile as DivergentRoadTile).onCustomEvent.AddListener(()=> {
+                            DivergentRoadPanel.SetActive(true);
+                        });
+                    }
                 }
                 else
                 {
@@ -187,5 +196,10 @@ public class CheckerboardManager : MonoBehaviour
     public void SetAdditionalTileAttributes(Vector3Int gridPos)
     {
         BoardTile bt = tileMap.GetTile(gridPos) as BoardTile;
+    }
+
+    public void SetDirection()
+    {
+        DivergentRoadTile.result = true;
     }
 }
